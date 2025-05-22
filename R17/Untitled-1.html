@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理システム</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .panel {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .function-list {
+            list-style: none;
+            padding: 0;
+        }
+        .function-item {
+            padding: 10px 15px;
+            margin: 5px 0;
+            background: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            cursor: pointer;
+        }
+        .function-item:hover {
+            background: #bbdefb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>管理システム</h1>
+        
+        <!-- 管理者パネル -->
+        <div class="panel">
+           <h1>管理者機能</h1>
+            <ul class="function-list">
+                <li class="function-item" onclick="showFunction('管理者ログイン')">ログイン機能</li>
+                <li class="function-item" onclick="showFunction('情報確認')">情報確認</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function showFunction(functionName) {
+            alert(functionName + " １");
+        }
+    </script>
+</body>
+</html>

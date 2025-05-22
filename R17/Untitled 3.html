@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>統合管理システム</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .panel {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #444;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .function-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .function-item {
+            margin: 10px 0;
+            padding: 12px 15px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #9C27B0; /* お客様用紫色 */
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .function-item:hover {
+            background-color: #f3e5f5; /* ホバー時の薄い紫色 */
+            transform: translateX(5px);
+        }
+        .function-item:active {
+            transform: translateX(5px) scale(0.98);
+        }
+        .function-item:before {
+            content: "・";
+            margin-right: 5px;
+            color: #9C27B0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>統合管理システム</h1>
+        
+        <!-- お客様パネル -->
+        <div class="panel">
+            <h2>お客様機能</h2>
+            <ul class="function-list">
+                <li class="function-item" onclick="showFunction('出店状況確認')">出店状況</li>
+                <li class="function-item" onclick="showFunction('出店情報確認')">出店情報</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function showFunction(functionName) {
+            // クリック時の視覚的フィードバック
+            const clickedItem = event.currentTarget;
+            clickedItem.style.backgroundColor = '#e1bee7';
+            
+            setTimeout(() => {
+                clickedItem.style.backgroundColor = '#f9f9f9';
+                alert(functionName + " 機能を実行します");
+                
+                // 実際のアプリケーションでは以下のようにページ遷移
+                // window.location.href = functionName + '.html';
+            }, 200);
+        }
+    </script>
+</body>
+</html>
